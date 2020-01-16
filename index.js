@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000
 const courses = [
     { id: 1, name: "Algorithms" },
     { id: 2, name: "Software Engineering" },
-    { id: 3, name: "Computer Software" }
+    { id: 3, name: PORT }
 ];
 
 express()
