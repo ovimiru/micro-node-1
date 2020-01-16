@@ -13,7 +13,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/', function(req, res) {
+  .get('/courses', function(req, res) {
     res.send(JSON.stringify(courses));
       // res.render('pages/db', results );
   })
