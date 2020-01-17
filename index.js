@@ -5,18 +5,18 @@ const PORT = process.env.PORT || 5000
 
 let courses = [];
 
-console.log('here');
+// console.log('here');
 
 // Make a request for a user with a given ID
 axios.get('https://micro-node-unitbv-2.herokuapp.com/courses')
     .then(function (response) {
         // handle success
-        console.log(response.data);
+        // console.log(response.data);
         courses = response.data;
     })
     .catch(function (error) {
         // handle error
-        console.log(error);
+        // console.log(error);
     })
     .finally(function () {
         // always executed
