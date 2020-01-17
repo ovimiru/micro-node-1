@@ -1,12 +1,27 @@
 const express = require('express')
 const path = require('path')
+const axios = require('axios');
 const PORT = process.env.PORT || 5000
 
-const courses = [
-    { id: 1, name: "Algorithms" },
-    { id: 2, name: "Software Engineering" },
-    { id: 3, name: "Computer Software" }
-];
+let courses = [];
+
+console.log('here');
+
+// Make a request for a user with a given ID
+axios.get('https://micro-node-unitbv-2.herokuapp.com/courses')
+    .then(function (response) {
+        // handle success
+        console.log(response.data);
+        courses = response.data;
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+    .finally(function () {
+        // always executed
+    });
+
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
