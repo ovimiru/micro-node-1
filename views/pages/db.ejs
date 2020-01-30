@@ -7,12 +7,33 @@
 <body>
 
 <div class="container">
-<h2>Database Results</h2>
+        <br /><br />
+<h1>Note studenti</h1>
+        <div class="row">
+                <div class="col">
+        <table class="table">
+        <thead class="thead-dark">
+        <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nume</th>
+                <th scope="col">Nota</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% results.forEach(function(r) { %>
+                <tr>
+                        <th scope="row"><%= r.id %></th>
+                        <td><%= r.name %></td>
+                        <td><%= r.grade %></td>
+                </tr>
+        <% }); %>
+        </tbody>
+        </table>
+                </div>
+        </div>
 
 <ul>
-    <% results.forEach(function(r) { %>
-        <li><%= r.id %> - <%= r.name %></li>
-    <% }); %>
+
 </ul>
 
 </div>

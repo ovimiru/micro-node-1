@@ -7,6 +7,7 @@ const env = Object.assign({}, process.env, {PORT: 5000});
 const child = spawn('node', ['index.js'], {env});
 
 test('responds to requests', (t) => {
+  // t.plan(3);
   t.plan(2);
 
   // Wait until the server is ready
@@ -22,6 +23,7 @@ test('responds to requests', (t) => {
       t.equal(response.statusCode, 200);
       // Assert content checks
       // t.notEqual(body.indexOf("<h1>Service one!</h1>"), -1);
+      // t.equal(body.indexOf("<h1>Administrare catalog</h1>"), -1);
     });
   });
 });

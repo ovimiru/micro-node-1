@@ -2,15 +2,28 @@
 <html>
 <head>
 <title>Test Service 1</title>
+    <% include ../partials/header.ejs %>
 </head>
 
 <body>
-<h1>Service one</h1>
-<h3>This page will display the courses that we will load from the second service!</h3>
-<p>This setup has deploy and CI pipeline.</p>
-<p>The script is pushed on Github.</p>
-<p>From the master branch we pull the changes in a staging app where we run a test.</p>
-<p>If the test passes the app is deply to the staging area from where it can be promoted to production</p>
-<a href="https://micro-node-unitbv-2.herokuapp.com/courses">Second service</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br /><br />
+            <div class="jumbotron">
+                <h1>Afisare note studenti</h1>
+                <p class="lead">This page will display the students loaded from the second service!</p>
+                <hr class="my-4">
+                <p>This setup has deploy and CI pipeline.</p>
+                <p>The script is pushed on Github.</p>
+                <p>From the master branch the changes are pulled in a staging app where we run a test.</p>
+                <p>If the test passes the app is deply to the staging area from where it can be promoted to production</p>
+                <a class="btn btn-primary btn-lg" href="/students" role="button">Lista note studenti</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
